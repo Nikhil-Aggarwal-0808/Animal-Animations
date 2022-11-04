@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,25 +14,49 @@
             background-attachment: fixed;
             margin: 0;
         }
-        marquee img{
-            width:300px;
-            height: 300px;
+        marquee .bird{
+            width:25vw;
+            height:25vh;
+        }
+        marquee .animal{
+            width:30vw;
+            height:30vh;
+        }
+        marquee div{
+            width:10vw;
+            display: inline-block;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .space{
+            height:30vh;
         }
     </style>
 
 </head>
 
 <body>
-    <marquee scrollamount="15" direction="left">
-        <image src="Bird.gif" />
-        <image src="B.gif" />
-    </marquee>
+    <div class="main">
+        <div>
+            <marquee scrollamount="15" direction="left">
+                <image src="Bird.gif" class="bird"/>
+                <image src="B.gif" class="bird"/>
+                <div></div>
+            </marquee>
+        </div>
+        <div class="space">
 
-    <br><br><br><br>
-    
-    <marquee scrollamount="15" direction="right">
-        <image src="Horse.gif" />
-        <image src="Monkey.gif" />
-    </marquee>
+        </div>
+        <div>
+            <marquee scrollamount="15" direction="right">
+                <image src="Horse.gif" class="animal"/>
+                <image src="Monkey.gif" class="animal"/>
+            </marquee>
+        </div>
+    </div>
+
 </body>
 </html>
